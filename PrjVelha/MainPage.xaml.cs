@@ -25,7 +25,7 @@
                 vez = "X";
             }
 
-
+            //Verifica Empate
             if (!string.IsNullOrWhiteSpace(btn10.Text) &&
                 !string.IsNullOrWhiteSpace(btn11.Text) &&
                 !string.IsNullOrWhiteSpace(btn12.Text) &&
@@ -97,6 +97,7 @@
                     return;
                 }
 
+
                 if (btn11.Text == "X" && btn21.Text == "X" && btn31.Text == "X")
                 {
                     DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
@@ -151,7 +152,63 @@
                 }
             }
 
-        }
+
+                if (btn11.Text == "X" && btn21.Text == "X" && btn31.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn11.Text == "O" && btn21.Text == "O" && btn31.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+
+                if (btn12.Text == "X" && btn22.Text == "X" && btn32.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn12.Text == "O" && btn22.Text == "O" && btn32.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+
+                /* Verificando diagonais */
+                if (btn10.Text == "X" && btn21.Text == "X" && btn32.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn10.Text == "O" && btn21.Text == "O" && btn32.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+
+                if (btn12.Text == "X" && btn21.Text == "X" && btn30.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn12.Text == "O" && btn21.Text == "O" && btn30.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+            }
+
+        
+        
 
 
         void Zerar()
