@@ -25,6 +25,7 @@
                 vez = "X";
             }
 
+
             if (!string.IsNullOrWhiteSpace(btn10.Text) &&
                 !string.IsNullOrWhiteSpace(btn11.Text) &&
                 !string.IsNullOrWhiteSpace(btn12.Text) &&
@@ -149,8 +150,10 @@
                     return;
                 }
             }
-            
-            } 
+
+        }
+
+
         void Zerar()
         {
             btn10.Text = "";
@@ -172,12 +175,11 @@
             btn30.IsEnabled = true;
             btn31.IsEnabled = true;
             btn32.IsEnabled = true;
-           
+
         }
+    }
+}
 
-    } // Fecha Classe
-} // Fecha Namespace
 
-    
 
     
