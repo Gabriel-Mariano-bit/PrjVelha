@@ -25,145 +25,133 @@
                 vez = "X";
             }
 
-            /* Verificando se o X ganhou na 1ª linha */
-            if (btn10.Text == "X" && btn11.Text == "X" && btn12.Text == "X")
+           //Verifica  Empate
+            if (!string.IsNullOrWhiteSpace(btn10.Text) &&
+                !string.IsNullOrWhiteSpace(btn11.Text) &&
+                !string.IsNullOrWhiteSpace(btn12.Text) &&
+                !string.IsNullOrWhiteSpace(btn20.Text) &&
+                !string.IsNullOrWhiteSpace(btn21.Text) &&
+                !string.IsNullOrWhiteSpace(btn22.Text) &&
+                !string.IsNullOrWhiteSpace(btn30.Text) &&
+                !string.IsNullOrWhiteSpace(btn31.Text) &&
+                !string.IsNullOrWhiteSpace(btn32.Text))
             {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 1ª linha */
-            if (btn10.Text == "O" && btn11.Text == "O" && btn12.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 2ª linha */
-            if (btn20.Text == "X" && btn21.Text == "X" && btn22.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 2ª linha */
-            if (btn20.Text == "O" && btn21.Text == "O" && btn22.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 3ª linha */
-            if (btn30.Text == "X" && btn31.Text == "X" && btn32.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 3ª linha */
-            if (btn30.Text == "O" && btn31.Text == "O" && btn32.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 1ª coluna */
-            if (btn10.Text == "X" && btn20.Text == "X" && btn30.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 1ª coluna */
-            if (btn10.Text == "O" && btn20.Text == "O" && btn30.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 2ª coluna */
-            if (btn11.Text == "X" && btn21.Text == "X" && btn31.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 2ª coluna */
-            if (btn11.Text == "O" && btn21.Text == "O" && btn31.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 3ª coluna */
-            if (btn12.Text == "X" && btn22.Text == "X" && btn32.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 3ª coluna */
-            if (btn12.Text == "O" && btn22.Text == "O" && btn32.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 1ª vertical */
-            if (btn10.Text == "X" && btn21.Text == "X" && btn32.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 1ª vertical */
-            if (btn10.Text == "O" && btn21.Text == "O" && btn32.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o X ganhou na 2ª vertical */
-            if (btn12.Text == "X" && btn21.Text == "X" && btn30.Text == "X")
-            {
-                DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            /* Verificando se o O ganhou na 2ª vertical */
-            if (btn12.Text == "O" && btn21.Text == "O" && btn30.Text == "O")
-            {
-                DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
-                Zerar();
-                return;
-            }
-
-            if (btn10.Text != "" && btn11.Text != "" && btn12.Text != "" &&
-               btn20.Text != "" && btn21.Text != "" && btn22.Text != "" &&
-               btn30.Text != "" && btn31.Text != "" && btn32.Text != "")
-            {
-                DisplayAlert("Nínguem Ganhou!", "O jogo terminou em Velha!", "Novo jogo");
+                DisplayAlert("Deu Velha!", "Ninguém Ganhou!", "Novo jogo");
                 Zerar();
             }
+            else
+            {
+                /* Verificando se o X ganhou na 1ª linha */
+                if (btn10.Text == "X" && btn11.Text == "X" && btn12.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn10.Text == "O" && btn11.Text == "O" && btn12.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
 
+                /* Verificando se o X ganhou na 2ª linha */
+                if (btn20.Text == "X" && btn21.Text == "X" && btn22.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn20.Text == "O" && btn21.Text == "O" && btn22.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
 
+                /* Verificando se o X ganhou na 3ª linha */
+                if (btn30.Text == "X" && btn31.Text == "X" && btn32.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn30.Text == "O" && btn31.Text == "O" && btn32.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
 
+                /* Verificando se o X ganhou nas colunas */
+                if (btn10.Text == "X" && btn20.Text == "X" && btn30.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn10.Text == "O" && btn20.Text == "O" && btn30.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
 
+                if (btn11.Text == "X" && btn21.Text == "X" && btn31.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn11.Text == "O" && btn21.Text == "O" && btn31.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+
+                if (btn12.Text == "X" && btn22.Text == "X" && btn32.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn12.Text == "O" && btn22.Text == "O" && btn32.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+
+                /* Verificando diagonais */
+                if (btn10.Text == "X" && btn21.Text == "X" && btn32.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn10.Text == "O" && btn21.Text == "O" && btn32.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+
+                if (btn12.Text == "X" && btn21.Text == "X" && btn30.Text == "X")
+                {
+                    DisplayAlert("Parabéns!", "O X ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+                if (btn12.Text == "O" && btn21.Text == "O" && btn30.Text == "O")
+                {
+                    DisplayAlert("Parabéns!", "O ganhou!", "Novo jogo");
+                    Zerar();
+                    return;
+                }
+            }
+
+        
         }
 
         void Zerar()
