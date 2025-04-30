@@ -25,8 +25,14 @@
           ColumnDefinitions="*, *, *"
           ColumnSpacing="10" RowSpacing="10" Margin="10">
 
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
-               Text="Jogo da Velha" />
+          <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+               Text="Jogo da Velha"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               TextColor="White"
+               FontSize="30"
+               FontAttributes="Bold"
+         />
 
         <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
         <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
